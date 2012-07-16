@@ -1,0 +1,9 @@
+section{
+	display:block;
+}
+
+ul.clean{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}

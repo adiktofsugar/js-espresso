@@ -1,0 +1,415 @@
+/*hover effects for all the buttons...*/
+input[type="submit"]:hover,
+button:hover{
+	cursor:pointer;
+}
+
+BODY{
+	background-image:url('images/blue_bg.jpg');
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+
+/*bubbles animation?*/
+
+.bubble{
+	opacity:0;
+}
+
+@-moz-keyframes bubble-start{
+	0% {
+		width:10px;
+		height:10px;
+		bottom:0;
+		left:50%;
+		opacity:1;
+	}
+	100% {
+		width:100px;
+		height:100px;
+		bottom:50px;
+		left:40%;
+		opacity:0;
+	}
+}
+@-moz-keyframes bubble-start-right{
+	0% {
+		width:10px;
+		height:10px;
+		bottom:0;
+		left:50%;
+		opacity:1;
+	}
+	100% {
+		width:100px;
+		height:100px;
+		bottom:50px;
+		left:55%;
+		opacity:0;
+	}
+}
+@-moz-keyframes bubble-start-center{
+	0% {
+		width:10px;
+		height:10px;
+		bottom:0;
+		left:50%;
+		opacity:1;
+	}
+	100% {
+		width:200px;
+		height:200px;
+		bottom:70px;
+		left:45%;
+		opacity:0;
+	}
+}
+@-webkit-keyframes bubble-start{
+	0% {
+		width:10px;
+		height:10px;
+		bottom:0;
+		left:50%;
+		opacity:1;
+	}
+	100% {
+		width:100px;
+		height:100px;
+		bottom:50px;
+		left:40%;
+		opacity:0;
+	}
+}
+
+@-webkit-keyframes bubble-start-right{
+	0% {
+		width:10px;
+		height:10px;
+		bottom:0;
+		left:50%;
+		opacity:1;
+	}
+	100% {
+		width:100px;
+		height:100px;
+		bottom:50px;
+		left:55%;
+		opacity:0;
+	}
+}
+@-webkit-keyframes bubble-start-center{
+	0% {
+		width:10px;
+		height:10px;
+		bottom:0;
+		left:50%;
+		opacity:1;
+	}
+	100% {
+		width:200px;
+		height:200px;
+		bottom:70px;
+		left:45%;
+		opacity:0;
+	}
+}
+.bubble{
+	display:block;
+	
+	background-color:red;
+	width:10px;
+	height:10px;
+	
+	position:absolute;
+	bottom:0;
+	left:50%;
+	
+	animation: bubble-start 4s;
+	animation-iteration-count: infinite;
+	-webkit-animation: bubble-start 4s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation: bubble-start 4s;
+	-moz-animation-iteration-count: infinite;
+	
+	border-radius:100px;
+}
+
+.bubble:nth-child(2n) {
+	background-color:yellow;
+	animation: bubble-start-right 2s;
+	animation-iteration-count: infinite;
+	-webkit-animation: bubble-start-right 2s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation: bubble-start-right 2s;
+	-moz-animation-iteration-count: infinite;
+}
+.bubble:nth-child(3n) {
+	background-color:green;
+	animation: bubble-start-center 3s;
+	animation-iteration-count: infinite;
+	-webkit-animation: bubble-start-center 3s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation: bubble-start-center 3s;
+	-moz-animation-iteration-count: infinite;
+}
+
+
+
+
+/*The espresso slot machine container.*/
+#espresso{
+	position:relative;
+	z-index:10;
+	
+	display:block;
+	max-width:80%;
+	text-align:center;
+	margin:5% auto;
+	padding:1em;
+	
+	background: #feccb1; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #feccb1 0%, #f17432 50%, #ea5507 51%, #fb955e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#feccb1), color-stop(50%,#f17432), color-stop(51%,#ea5507), color-stop(100%,#fb955e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', endColorstr='#fb955e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+	border:3px solid #777;
+	border-radius:10px;
+}
+
+
+/*The slots container*/
+#ESlots{
+	background:url('images/paisley (320x320).jpg') repeat top left;
+	border-radius:5px;
+	
+	box-shadow:
+		inset -2px -3px 10px #000;
+	
+	padding:25px;
+}
+#ESlots>UL{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+#ESlots>UL::after{
+	content:"";
+	clear:left;
+	display:block;
+}
+
+#ESlots>UL>LI:first-child{
+	margin-left:0;
+}
+#ESlots>UL>LI:last-child{
+	margin-right:0;
+}
+
+#ESlots>UL>LI{
+	display:inline-block;
+	
+	background: rgb(196,196,196); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(196,196,196,1) 0%, rgba(239,239,239,1) 55%, rgba(252,252,252,1) 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(196,196,196,1)), color-stop(55%,rgba(239,239,239,1)), color-stop(99%,rgba(252,252,252,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(196,196,196,1) 0%,rgba(239,239,239,1) 55%,rgba(252,252,252,1) 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(196,196,196,1) 0%,rgba(239,239,239,1) 55%,rgba(252,252,252,1) 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(196,196,196,1) 0%,rgba(239,239,239,1) 55%,rgba(252,252,252,1) 99%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(196,196,196,1) 0%,rgba(239,239,239,1) 55%,rgba(252,252,252,1) 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c4c4c4', endColorstr='#fcfcfc',GradientType=0 ); /* IE6-9 */
+
+	box-shadow:0px 0px 10px #000;
+	
+	width : 33%;
+	height:110px;
+	margin:0 auto;
+	
+	overflow:hidden;
+}
+
+
+
+/* the rotator here is actually just a slider. */
+.rotator{
+	position:relative;
+	top:0px;
+	left:50%;
+	
+	width:100px;
+	height:300px;
+	
+	transition:top 1s;
+	-moz-transition:top 1s;
+	-webkit-transition:top 1s;
+	
+}
+.rotator.active1{
+	top:0px;
+}
+.rotator.active2{
+	top:-100px;
+}
+.rotator.active3{
+	top:-200px;
+}
+
+/*the rotatorFace is a face that is transformed to rotate around the x axis*/
+li.rotatorFace{
+	position:relative;
+	margin-left:-50%;
+	
+	width:100px;
+	height:100px;
+	
+	border:1px solid #aaa;
+	border-radius:3px;
+}
+.RFText{
+	display:block;
+	margin:30% 1em 0 1em;
+	text-align:center;
+	font-family:verdana, arial, sans-serif;
+	
+	color:white;
+	text-shadow:white 0px 0px 5px;
+}
+
+.rotatorFace.f1{
+	background-color:#d87122;
+}
+.rotatorFace.f2{
+	background-color:#94d622;
+}
+.rotatorFace.f3{
+	background-color:#8c5d0c;
+}
+
+@media (-webkit-transform-3d) {
+	/* the rotator list isnt really anything...just have to be a good width */
+	.rotator{
+		position:relative;
+		top:5px !important;
+		
+		width:100px;
+		height:100px;
+		
+		-webkit-transform-style:preserve-3d;
+		
+		transition: -webkit-transform 1s;
+		-webkit-transition: -webkit-transform 1s;
+		
+	}
+	.rotator.active1{
+		-webkit-transform:rotateX(0deg);
+	}
+	.rotator.active2{
+		-webkit-transform:rotateX(135deg);
+	}
+	.rotator.active3{
+		-webkit-transform:rotateX(225deg);
+	}
+
+	/*the rotatorFace is a face that is transformed to rotate around the x axis*/
+	li.rotatorFace{
+		position:absolute;
+		top:0;
+		left:0;
+		
+		width:100px;
+		height:100px;
+		
+		border:1px solid #aaa;
+		border-radius:3px;
+	}
+	
+	.rotatorFace.f1{
+		-webkit-transform:translate3d(0px, 0px, 44px) rotateX(0deg);
+	}
+	.rotatorFace.f2{
+		-webkit-transform: translate3d(0px, 31px, -31px) rotateX(240deg);
+	}
+	.rotatorFace.f3{
+		-webkit-transform: translate3d(0px,-31px, -31px) rotateX(120deg);
+	}
+}
+
+/*THe popup div...for the results thing */
+.popupDiv {
+	width:350px;
+	height:350px;
+	
+	background-color:white;
+	border:1px solid #aaa;
+	border-radius:5px;
+	
+	position:absolute;
+	top:50%;
+	left:50%;
+	
+	margin-top:-175px;
+	margin-left:-175px;
+	
+	z-index:150;
+}
+.PDHeading{
+	text-align:center;
+	
+	font-family:verdana;
+	color:#aaa;
+	
+	height:30px;
+	
+	position:relative;
+	top:50%;
+	margin-top:-30px;
+}
+
+
+/* the button....actually...that's supposed to be a lever... */
+#ELever{
+	padding:1em;
+	
+	
+}
+#ELever BUTTON{
+	width:50%;
+	height:50px;
+	
+	background: #fefcea; /* Old browsers */
+	background: -moz-linear-gradient(left,  #fefcea 0%, #f1da36 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fefcea), color-stop(100%,#f1da36)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #fefcea 0%,#f1da36 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #fefcea 0%,#f1da36 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #fefcea 0%,#f1da36 100%); /* IE10+ */
+	background: linear-gradient(to right,  #fefcea 0%,#f1da36 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 */
+
+	border:1px solid #aaa;
+	border-radius:10px;
+	
+	padding:0.3em;
+	font-size:120%;
+	
+}
+#ELever BUTTON:hover{
+	background: #fcf7c9; /* Old browsers */
+	
+}
+
+#EResult{
+	padding:1em;
+	min-width:70%;
+	text-align:center;
+	
+	font-family:arial;
+	font-size:25px;
+	
+	color:white;
+	text-shadow: white 0px 0px 10px;
+	background-color:rgba(255, 200, 100, 0.5);
+	
+	min-height:50px;
+}

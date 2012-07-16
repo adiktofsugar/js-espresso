@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Espresso slot machine</title>
+	
+	<link rel="stylesheet" href="default.css" />
+	<link rel="stylesheet" href="style.css" />
+	<script src="js/log.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-highlight.js"></script>
+	
+</head>
+
+<body>
+	<section id="espresso">
+	
+		<div id="ESlots">
+			<ul class="clean">
+				<li>Not Initialized.</li>
+				<li>Not Initialized.</li>
+				<li>Not Initialized.</li>
+			</ul>
+		</div>
+		
+		<div id="ELever">
+			<button>Push me to get someting cool!</button>
+		</div>
+		
+		<div id="EResult">
+			This is where I will tell you what just happened. o__O
+		</div>
+	
+	</section>
+	
+	<script src="js/espresso.js"></script>
+	<script>
+	espresso( $('#espresso') ).init();
+	
+	
+	//now make some bubbles...
+	//why? Because I don't feel like...sleeping...
+	
+	var howManyBubbles = 6;
+	for (var i=0; i<howManyBubbles; i++){
+		$('body').append('<div class="bubble"></div>');
+	}
+	
+	</script>
+	
+</body>
+
+</html>
